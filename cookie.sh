@@ -1,7 +1,7 @@
 #! /bin/bash
 # Cookie cutter
 # Created by: Abishek Murali
-# This script takes a csv file as input and outputs columns and rows in a given range
+# This script creates a sample data science project folder structure
 
 echo "Do you want to create project in this $PWD folder?(yes/no)"
 read choice
@@ -24,10 +24,18 @@ fi
 
 mkdir $root
 cd $root
-mkdir doc data src bin results
+mkdir docs data src bin results models
 
-echo "" > requirement.txt
-echo "" > README.md
+for d in */ ; do
+    cd "$d"
+    touch .gitkeep
+    cd ..
+done
 
-echo 'Folders created.'
+touch requirements.txt
+touch README.md
+touch CITATIONS.md
+touch LICENSE.md
+
+echo 'Data science project structure created'
 cd ..
