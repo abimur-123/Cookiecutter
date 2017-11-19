@@ -24,7 +24,7 @@ fi
 
 mkdir $root
 cd $root
-mkdir docs data src bin results models
+mkdir docs data scripts bin results models #add folders
 
 for d in */ ; do
     cd "$d"
@@ -32,10 +32,14 @@ for d in */ ; do
     cd ..
 done
 
-touch requirements.txt
-touch README.md
+touch REQUIREMENTS.txt
 touch CITATIONS.md
 touch LICENSE.md
+touch .gitignore
+touch CONTRIBUTING.md
+touch CONDUCT.md
+
+echo "**$root**" >> README.md
 
 echo 'Data science project structure created'
 cd ..
