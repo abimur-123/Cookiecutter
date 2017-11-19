@@ -1,6 +1,6 @@
 # Cookie cutter
 
-Cookie cutter provides a folder structure for sharing and developing data science work. This project is inspired by a similar project developed by [Daniel Chen](https://github.com/chendaniely/computational-project-cookie-cutter).
+Cookie cutter provides a folder structure for sharing and developing data science work. This project is inspired by a similar project developed by [Daniel Chen](https://github.com/chendaniely/computational-przoject-cookie-cutter).
 
 ## Folder structure
 
@@ -13,6 +13,8 @@ root
 |-- LICENSE
 |-- data
 |   --
+|-- bin
+|   --
 |-- docs
 |   --  
 |-- models
@@ -22,9 +24,9 @@ root
 |-- scripts
 |   --
 |-- CITATIONS
-|-- CONTRIBUTING
-|-- CONDUCT
-|-- REQUIREMENTS
+|-- contributions
+|-- conduct
+|-- requirements
 ```
 
 ## How to download
@@ -48,7 +50,7 @@ An example of the path that can be specified -
 
 ## Other cookie cutter projects
 
-There are others trying to develop similar cookie cutter templates for data science projects if my project does not meet your requirements - 
+There are others trying to develop similar cookie cutter templates for data science projects if my project does not meet your requirements -
 
 1. https://github.com/chendaniely/computational-project-cookie-cutter
 2. https://github.com/ardydedase/cookiecutter-pypackage
