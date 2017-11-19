@@ -44,9 +44,15 @@ An example of the path that can be specified -
 
 ```/c/Users/User1/Desktop```
 
+*Note*: The output can be observed in the project folder created in this path
+
 ## Other cookie cutter projects
 
-There are others trying to develop similar cookie cutter templates
+There are others trying to develop similar cookie cutter templates for data science projects if my project does not meet your requirements - 
 
 1. https://github.com/chendaniely/computational-project-cookie-cutter
 2. https://github.com/ardydedase/cookiecutter-pypackage
+
+## Author
+
+Developed by Abishek Murali, Nov. 2017.
