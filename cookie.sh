@@ -16,30 +16,39 @@ pwd
 echo "Please enter the project name"
 read root
 
+#https://stackoverflow.com/a/3231821/5624220
+#Check if directory exists. Overwrite or exit based on that.
 if [ -d "$root" ]; then
   echo 'Directory already exists!'
-  echo 'Exit program'
-  exit
+  read -p "Do you want to overwrite this folder?<Yes/No> " prompt
+    if [[ $prompt == "y" || $prompt == "Y" || $prompt == "Yes" || $prompt == "yes" ]]
+    then
+      rm -rf $root
+    else
+      echo "Exiting program"
+      exit 0
+    fi
 fi
 
 mkdir $root
 cd $root
 mkdir docs data scripts bin results models #add folders
 
+#to ensure subdirectories are not ignored in github
 for d in */ ; do
     cd "$d"
     touch .gitkeep
     cd ..
 done
 
-touch REQUIREMENTS.txt
-touch CITATIONS.md
+touch requirements.txt
+touch citations.md
 touch LICENSE.md
 touch .gitignore
-touch CONTRIBUTING.md
-touch CONDUCT.md
+touch contributions.md
+touch conduct.md
 
-echo "**$root**" >> README.md
+echo "# $root" >> README.md
 
 echo 'Data science project structure created'
 cd ..
